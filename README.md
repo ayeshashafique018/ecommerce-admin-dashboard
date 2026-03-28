@@ -1,16 +1,68 @@
-# React + Vite
+# 🛍️ Royal Jewels Admin Panel
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, scalable, and responsive **Admin Dashboard** built with **React (Vite)**, designed to efficiently manage products, orders, users, analytics, and AI-powered features. This project demonstrates a real-world enterprise-style admin system with advanced UI, data visualization, and clean architecture.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## React Compiler
+👉 https://ecommerce-admin-dashboard-pink.vercel.app/dashboard
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 📊 Interactive analytics dashboard with real-time charts  
+- 🛒 Product management system (CRUD-ready structure)  
+- 📦 Orders management & tracking  
+- 👥 User management system  
+- 📈 Advanced data visualization & insights  
+- 📅 Calendar scheduling integration  
+- 🤖 AI-powered feature page (OpenAI integration ready)  
+- 🔐 Authentication-ready (JWT-based architecture)  
+- 🎨 Modern dark UI with responsive design  
+- 📱 Fully responsive across all devices  
+- ⚡ High-performance with Vite build tool  
+- 🔄 Modular and scalable component structure  
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- ⚛️ React 18  
+- ⚡ Vite  
+- 🧭 React Router DOM  
+- 🎨 Bootstrap 5 & React Bootstrap  
+- 🎯 Material UI (MUI)  
+- 🎨 Tailwind CSS  
+- 🎭 Emotion (styled components)  
+- 🎬 React Spring (animations)  
+
+### Data Visualization
+- 📊 Chart.js  
+- 📊 React Chart.js 2  
+- 📊 ApexCharts & React ApexCharts  
+- 📊 Recharts  
+- 📅 React Big Calendar  
+- 📅 React Calendar  
+
+### Forms & UI Enhancements
+- 📝 React Hook Form  
+- 🔔 SweetAlert2  
+- 🎨 React Icons  
+
+### API & State Handling
+- 🔗 Axios  
+
+### Backend (Architecture Ready)
+- 🟢 Node.js (Express)  
+- 🍃 MongoDB (Mongoose)  
+- 🔐 JWT Authentication  
+- 🔒 bcryptjs (password hashing)  
+- 🌐 CORS  
+- ⚙️ dotenv  
+
+---
+
+## 📁 Project Structure
