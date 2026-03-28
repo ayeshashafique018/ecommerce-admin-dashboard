@@ -1,0 +1,56 @@
+/* Sidebar custom styles */
+
+.sidebar {
+  overflow: hidden;
+}
+
+.sidebar.collapsed {
+  width: 80px !important;
+}
+
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  color: #EBBE4D;
+  text-decoration: none;
+  margin: 0.3rem 0;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.sidebar ul li a:hover {
+  background-color: #EBBE4D;
+  color: #222222;
+}
+
+.sidebar ul li a.active {
+  background-color: #EBBE4D;
+  color: #222222;
+}
+
+.sidebar.collapsed ul li a span {
+  display: none;
+}
+
+.sidebar-icon {
+  font-size: 1.5rem;
+  width: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-toggle {
+  background: none;
+  border: none;
+  color: #EBBE4D;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.mobile-hamburger {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1100;
+}

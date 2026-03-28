@@ -1,0 +1,105 @@
+:root {
+  --primary-gold: #EBBE4D;
+  --light-gray: #636363;
+  --medium-gray: #3b3b3b;
+  --dark-gray: #222222;
+  --very-dark-gray: #141414;
+  --black: #000000;
+}
+
+body {
+  background-color: var(--very-dark-gray);
+  color: var(--light-gray);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+a {
+  color: var(--primary-gold);
+}
+
+.card {
+  background-color: var(--medium-gray);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.sidebar {
+  background-color: var(--dark-gray);
+}
+
+.navbar {
+  background-color: var(--medium-gray);
+}
+
+.stat-card:hover {
+  background-color: #3b3b3b;
+  transform: translateY(-5px);
+}
+
+
+/* :root {
+  --bg-main: #141414;
+  --bg-card: #222222;
+  --text-primary: #ffffff;
+  --text-muted: #636363;
+  --accent: #EBBE4D;
+  --border: #3b3b3b;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+}
+
+.custom-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+} */
+
+
+
+/* :root {
+  --primary-color: #EBBE4D;
+  --bg-dark: #141414;
+  --bg-darker: #222222;
+  --text-light: #fff;
+  --text-grey: #636363;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+a {
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+.sidebar {
+  background-color: var(--bg-darker);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.navbar {
+  background-color: var(--bg-darker);
+}
+
+.card {
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  border: none;
+}
+
+.card-title {
+  color: var(--primary-color);
+} */
