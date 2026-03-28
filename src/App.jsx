@@ -2,10 +2,9 @@ import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 
 // Layout
-import Sidebar from "./components/Sidebar";
-import Navbar from "./components/Navbar";
+import AdminLayout from "./layouts/AdminLayout";
 
-// Pages
+// Pages (optional if you want direct access, but usually inside layout)
 import Dashboard from "./pages/Dashboard";
 import Products from "./pages/Products";
 import Orders from "./pages/Orders";
@@ -16,112 +15,26 @@ import Calendar from "./pages/Calendar";
 import AI from "./pages/AI";
 import Profile from "./pages/Profile";
 
-// Admin Layout
-const AdminLayout = () => {
-  const [sidebarOpen, setSidebarOpen] = React.useState(
-    window.innerWidth >= 992
-  );
-  const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
-
-  React.useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-      setSidebarOpen(window.innerWidth >= 992);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const sidebarWidth = 250;
-
-  return (
-    <div className="d-flex" style={{ backgroundColor: "#141414", color: "#EBBE4D" }}>
-      {/* Sidebar */}
-      <div
-        className="position-fixed h-100"
-        style={{
-          width: sidebarWidth,
-          transform: sidebarOpen
-            ? "translateX(0)"
-            : `translateX(-${sidebarWidth}px)`,
-          transition: "transform 0.3s ease",
-          backgroundColor: "#222222",
-          zIndex: 1000,
-        }}
-      >
-        <Sidebar
-          isOpen={sidebarOpen}
-          toggleSidebar={() => setSidebarOpen(!sidebarOpen)}
-        />
-      </div>
-
-      {/* Overlay */}
-      {sidebarOpen && windowWidth < 992 && (
-        <div
-          onClick={() => setSidebarOpen(false)}
-          className="position-fixed w-100 h-100"
-          style={{
-            top: 0,
-            left: 0,
-            backgroundColor: "rgba(0,0,0,0.5)",
-            zIndex: 999,
-          }}
-        />
-      )}
-
-      {/* Content */}
-      <div
-        style={{
-          marginLeft:
-            sidebarOpen && windowWidth >= 992 ? sidebarWidth : 0,
-          transition: "margin-left 0.3s ease",
-          minHeight: "100vh",
-          width: "100%",
-        }}
-      >
-        <Navbar toggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
-
-        <div className="content p-3">
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/orders" element={<Orders />} />
-            <Route path="/users" element={<Users />} />
-            <Route path="/analytics" element={<Analytics />} />
-            <Route path="/billing" element={<Billing />} />
-            <Route path="/calendar" element={<Calendar />} />
-            <Route path="/ai" element={<AI />} />
-            <Route path="/profile" element={<Profile />} />
-          </Routes>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 function App() {
   return (
     <Routes>
-<<<<<<< HEAD
-      <Route path="*" element={<Navigate to="/Dashboard" replace />} />
-=======
-      {/* Open directly dashboard */}
+      {/* Root → redirect to dashboard */}
       <Route path="/" element={<Navigate to="/dashboard" replace />} />
->>>>>>> 0b3f8d7 ( remove login and sigup)
 
-      {/* Admin routes */}
-      <Route path="/dashboard" element={<AdminLayout />} />
-      <Route path="/products" element={<AdminLayout />} />
-      <Route path="/orders" element={<AdminLayout />} />
-      <Route path="/users" element={<AdminLayout />} />
-      <Route path="/analytics" element={<AdminLayout />} />
-      <Route path="/billing" element={<AdminLayout />} />
-      <Route path="/calendar" element={<AdminLayout />} />
-      <Route path="/ai" element={<AdminLayout />} />
-      <Route path="/profile" element={<AdminLayout />} />
+      {/* Admin Layout Wrapper */}
+      <Route path="/" element={<AdminLayout />}>
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="products" element={<Products />} />
+        <Route path="orders" element={<Orders />} />
+        <Route path="users" element={<Users />} />
+        <Route path="analytics" element={<Analytics />} />
+        <Route path="billing" element={<Billing />} />
+        <Route path="calendar" element={<Calendar />} />
+        <Route path="ai" element={<AI />} />
+        <Route path="profile" element={<Profile />} />
+      </Route>
 
-      {/* fallback */}
+      {/* Catch all */}
       <Route path="*" element={<Navigate to="/dashboard" replace />} />
     </Routes>
   );
