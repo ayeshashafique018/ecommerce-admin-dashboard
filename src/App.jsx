@@ -91,14 +91,8 @@ const AdminLayout = () => {
 function App() {
   return (
     <Routes>
-      <Route path="/login" element={<Login />} />
+      <Route path="*" element={<Navigate to="/dashboard" replace />} />
 
-      {/* Protected admin routes */}
-      <Route element={<ProtectedRoute roleRequired="admin" />}>
-        <Route path="/*" element={<AdminLayout />} />
-      </Route>
-
-      <Route path="*" element={<Navigate to="/login" replace />} />
     </Routes>
   );
 }
